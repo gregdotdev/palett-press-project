@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ news.title }}</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .news-header {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: #333;
+    }
+
+    .news-image {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-content {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .news-footer {
+        margin-top: 20px;
+    }
+
+    .back-button {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .back-button:hover {
+        background-color: #555;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .container {
+            width: 95%;
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .news-content {
+            font-size: 1em;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="news-header">
+    <h1>{{ news.title }}</h1>
+  </div>
+
+  <img src="{{ news.image_url }}" alt="News Image" class="news-image"> <!-- Image added here -->
+
+  <div class="news-content">
+    <p>{{ news.content }}</p>
+  </div>
+
+  <div class="news-footer">
+    <a href="/" class="back-button">Back to News List</a>
+  </div>
+</div>
+
+</body>
+</html>
